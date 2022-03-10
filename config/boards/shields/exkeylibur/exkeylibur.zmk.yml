@@ -1,10 +1,10 @@
 file_format: "1"
 id: exkeylibur
-name: Exkeylibur/Sweep
+name: Exkeylibur
 type: shield
-url: https://github.com/davidphilipbarr/Sweep
+url: https://github.com/tlietz/Exkeylibur
 requires: [pro_micro]
-exposes: [i2c_oled]
+exposes: []
 features:
     - keys
 siblings:
