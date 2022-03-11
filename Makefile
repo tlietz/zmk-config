@@ -1,4 +1,4 @@
-# Path to zmk directory
+# Path to zmk directory. Note that this is not your zmk-config directory.
 ZMK_PATH:=/Users/tlietz/Developer/Keyboards/zmk
 
 # microcontroller name
@@ -11,7 +11,9 @@ FW:=zmk.uf2
 
 default: clean left right
 
-pristine: clean 
+pristine: clean left_pristine right
+
+left_pristine: 
 	cd ${ZMK_PATH}/app; \
 	west build -p -b ${MCU} -- -DSHIELD=${KEEB}_left -DZMK_CONFIG="${MAKEFILE_PATH}/config"
 	$(call copy_firmware,left)
