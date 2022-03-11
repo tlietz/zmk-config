@@ -32,6 +32,7 @@ define build
 endef
 
 
+# argument $(1) is the side of the keyboard being built
 define copy_firmware
 	cp ${ZMK_PATH}/app/build/zephyr/${FW} ${MAKEFILE_PATH}/firmware
 	cd ${MAKEFILE_PATH}/firmware; \
