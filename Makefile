@@ -13,6 +13,11 @@ default: clean left right
 
 pristine: clean left_pristine right
 
+# The makefiles for specific OS copies the built firmware into the corresponding Nice_Nano_v2.
+# Note that the NICENANO must be renamed to LEFT and RIGHT for this to work.
+mac: clean left right
+	open firmware/
+
 left_pristine: 
 	cd ${ZMK_PATH}/app; \
 	west build -p -b ${MCU} -- -DSHIELD=${KEEB}_left -DZMK_CONFIG="${MAKEFILE_PATH}/config"
