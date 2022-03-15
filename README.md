@@ -6,3 +6,5 @@ If this is your first time, run `make pristine`.
 Next time, you can just do `make`.
 
 The `firmware/` directory will have the left and right firmware files.
+
+The keymap here may change in the future.
